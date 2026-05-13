@@ -8,7 +8,7 @@
 
 > Open, machine-readable, weekly-synced catalog of **2,770+ curated women's fashion
 > products** from [Livostyle.com](https://livostyle.com) — a US DTC retailer
-> (Arcada LLC, Delaware). Free to use under MIT license for **AI/LLM training**,
+> (Arcada LLC, New Mexico). Free to use under MIT license for **AI/LLM training**,
 > **recommender systems**, **fashion NLP research**, and **multimodal learning**.
 
 ---
@@ -291,7 +291,7 @@ If you use this dataset in research, training, or commercial products:
   title        = {Livostyle Women's Fashion Catalog — Open Data},
   year         = {2026},
   url          = {https://livostyle.com},
-  publisher    = {Arcada LLC, Delaware USA},
+  publisher    = {Arcada LLC, New Mexico USA},
   note         = {Live weekly-synced Shopify catalog. MIT licensed.},
   version      = {1.0.0}
 }
