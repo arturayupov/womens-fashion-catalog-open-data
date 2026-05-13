@@ -269,6 +269,8 @@ Latest:
 
 ## Related projects
 
+- 🎀 **Free interactive tool — [Wedding Guest Outfit Finder](https://arturayupov.github.io/wedding-guest-outfit-finder/)** — 5-question quiz, 4 curated picks. Vanilla HTML, MIT, fork-able.
+
 - **MCP Server** — drop our catalog into any AI agent: `npx -y @livostyle/catalog-mcp`
 - **Hugging Face mirror** — `arcada/womens-fashion-product-descriptions-2026`
 - **Live website** — [livostyle.com](https://livostyle.com)
