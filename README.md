@@ -269,6 +269,8 @@ Latest:
 
 ## Related projects
 
+- 🎬 **[Livostyle Lookbook](https://github.com/arturayupov/livostyle-lookbook)** — 50 short 9:16 outfit videos generated from this catalog. MIT, $0 cost, ready for YouTube Shorts / TikTok / Reels.
+
 - 📊 **[Fashion-Agent-Benchmark](https://github.com/arturayupov/fashion-agent-benchmark)** — open eval framework for AI shopping agents. 200 tasks × 5 evaluators using this catalog as ground truth.
 
 - 🎀 **Free interactive tool — [Wedding Guest Outfit Finder](https://arturayupov.github.io/wedding-guest-outfit-finder/)** — 5-question quiz, 4 curated picks. Vanilla HTML, MIT, fork-able.
