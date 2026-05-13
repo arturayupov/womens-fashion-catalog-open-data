@@ -269,6 +269,8 @@ Latest:
 
 ## Related projects
 
+- 📊 **[Fashion-Agent-Benchmark](https://github.com/arturayupov/fashion-agent-benchmark)** — open eval framework for AI shopping agents. 200 tasks × 5 evaluators using this catalog as ground truth.
+
 - 🎀 **Free interactive tool — [Wedding Guest Outfit Finder](https://arturayupov.github.io/wedding-guest-outfit-finder/)** — 5-question quiz, 4 curated picks. Vanilla HTML, MIT, fork-able.
 
 - **MCP Server** — drop our catalog into any AI agent: `npx -y @livostyle/catalog-mcp`
