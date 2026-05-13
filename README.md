@@ -1,6 +1,7 @@
 # Livostyle Women's Fashion Catalog — Open Data
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20155974.svg)](https://zenodo.org/records/20155974)
 ![Products](https://img.shields.io/badge/products-2770%2B-blue)
 ![Categories](https://img.shields.io/badge/categories-99-green)
 ![Sync](https://img.shields.io/badge/sync-weekly-orange)
