@@ -255,13 +255,16 @@ def main():
     for p in products:
         c = (p.get('category') or {}).get('full_path', 'Uncategorized') if p.get('category') else 'Uncategorized'
         cats[c] = cats.get(c, 0) + 1
+    review_counts = [(p.get('reviews') or {}).get('count') or 0 for p in products]
+    ratings_present = [r for r in [(p.get('reviews') or {}).get('rating') for p in products] if r]
     stats = {
         'last_synced': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()),
         'total_products': len(products),
         'total_collections': len(collections),
-        'products_with_reviews': sum(1 for p in products if (p.get('reviews') or {}).get('count')),
-        'avg_review_count': round(sum((p.get('reviews') or {}).get('count') or 0 for p in products) / max(len(products), 1), 1),
-        'avg_rating': round(sum((p.get('reviews') or {}).get('rating') or 0 for p in products) / max(sum(1 for p in products if (p.get('reviews') or {}).get('rating')), 1), 2),
+        'products_with_reviews': sum(1 for c in review_counts if c > 0),
+        'total_reviews': sum(review_counts),
+        'avg_review_count': round(sum(review_counts) / max(len(products), 1), 1),
+        'avg_rating': round(sum(ratings_present) / max(len(ratings_present), 1), 2),
         'products_by_category': dict(sorted(cats.items(), key=lambda x: -x[1])),
         'currency': 'USD',
         'source': 'https://livostyle.com',
