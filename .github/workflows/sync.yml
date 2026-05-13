@@ -1,0 +1,45 @@
+name: Weekly catalog sync
+
+on:
+  schedule:
+    # Every Sunday at 06:00 UTC
+    - cron: '0 6 * * 0'
+  workflow_dispatch:  # manual trigger from GitHub UI
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install deps
+        run: pip install pandas pyarrow
+
+      - name: Run sync
+        env:
+          SHOPIFY_SHOP_DOMAIN:  ${{ secrets.SHOPIFY_SHOP_DOMAIN }}
+          SHOPIFY_ACCESS_TOKEN: ${{ secrets.SHOPIFY_ACCESS_TOKEN }}
+          SHOPIFY_API_VERSION:  '2025-01'
+        run: python scripts/sync_from_shopify.py
+
+      - name: Commit & push
+        run: |
+          git config user.name  "livostyle-bot"
+          git config user.email "info@arcada.store"
+          git add data/ thumbnails/
+          if git diff --cached --quiet; then
+            echo "No changes."
+          else
+            STATS=$(cat data/stats.json | python -c "import sys,json; s=json.load(sys.stdin); print(f\"{s['total_products']} products, {s['total_collections']} collections\")")
+            git commit -m "🔄 Weekly sync — ${STATS}"
+            git push
+          fi

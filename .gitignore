@@ -1,0 +1,19 @@
+# Caches & build artifacts
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+*.log
+
+# Secrets — NEVER commit
+.env
+.env.*
+*.token
+sync_config.env
+sync_config*.env
+
+# Local sync cache (raw Shopify GraphQL responses — large, regenerable)
+.cache_*.json
+
+# Local stage scripts (only sync_from_shopify.py is needed in repo)
+scripts/_stage*.py

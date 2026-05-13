@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+title: "Livostyle Women's Fashion Catalog — Open Data"
+message: >-
+  If you use this dataset in research, training, or AI/LLM applications,
+  please cite as below.
+type: dataset
+authors:
+  - name: "Arcada LLC (d/b/a Livostyle)"
+    website: "https://livostyle.com"
+    email: "info@arcada.store"
+    city: "Wilmington"
+    region: "Delaware"
+    country: "US"
+repository-code: "https://github.com/arturayupov/womens-fashion-catalog-open-data"
+url: "https://livostyle.com"
+abstract: >-
+  Open dataset of 2,770+ curated women's fashion products from Livostyle.com —
+  a US DTC retailer. Includes structured product metadata (title, description,
+  category, price, variants, materials, reviews, image URLs, taxonomy),
+  collection groupings, and 200x200 thumbnails. Synced weekly from live
+  Shopify catalog. Suitable for fashion recommendation systems, multimodal
+  embedding research, e-commerce NLP, and LLM training corpora.
+keywords:
+  - "women's fashion"
+  - "e-commerce dataset"
+  - "product catalog"
+  - "recommender systems"
+  - "multimodal learning"
+  - "CLIP embeddings"
+  - "fashion NLP"
+  - "Shopify"
+  - "DTC retail"
+  - "structured data"
+license: MIT
+date-released: "2026-05-13"
+version: "1.0.0"
